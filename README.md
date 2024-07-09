@@ -19,7 +19,7 @@ GEMINI_API_KEY=<GEMINI_API_KEY>
 docker run \
   -v ./files/output_pngs:/app/files/output_pngs \
   -v ./prompts:/app/prompts \
-  -it gemini
+  -it gemini \
   extract_and_transform.py
 ```
 or
@@ -35,6 +35,6 @@ docker run \
 docker run \
   -v ./files/output_pngs:/app/files/output_pngs \
   -v ./prompts:/app/prompts \
-  -it gemini
+  -it gemini \
   image_recognition.py
 ```
