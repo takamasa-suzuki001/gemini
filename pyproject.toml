@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "gemini"
+version = "0.1.0"
+description = ""
+authors = ["takamasa-suzuki001 <takamasa-suzuki@gmo-trust.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-dotenv = "^1.0.1"
+google-generativeai = "^0.7.1"
+PyMuPDF = "^1.24.7"
+pdf2image = "^1.17.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,83 @@
+添付の2枚の画像に表示された各表の項目名と入力値の組み合わせをJSON形式で出力してください。
+各画像の各表の構成は以下のようになっています。
+
+# 表1
+## 表カラム名
+Beneficial owner 1
+Beneficial owner 2
+## 表項目名
+Title
+Full name
+DOB (mm/dd/yyyy)
+Nationality
+Country of Residence
+Street Address (include apartment and/or building number)
+City
+State
+Zip/Postal Code
+Identifier (SSN for US nationals, Passport Number for non-US)
+Beneficial Ownership Percentage
+Politically Exposed Person (PEP)
+If the individual is a PEP, please provide details
+
+# 表2
+## 表カラム名
+Beneficial owner 2
+Beneficial owner 3
+## 表項目名
+Title
+Full name
+DOB (mm/dd/yyyy)
+Nationality
+Country of Residence
+Street Address (include apartment and/or building number)
+City
+State
+Zip/Postal Code
+Identifier (SSN for US nationals, Passport Number for non-US)
+Beneficial Ownership Percentage
+Politically Exposed Person (PEP)
+If the individual is a PEP, please provide details
+
+# 表3
+## 表カラム名
+Individual with Management Control
+## 表項目名
+Title
+Full name
+DOB (mm/dd/yyyy)
+Nationality
+Country of Residence
+Street Address (include apartment and/or building number)
+City
+State
+Zip/Postal Code
+Identifier (SSN for US nationals, Passport Number for non-US)
+Position
+Politically Exposed Person (PEP)
+If the individual is a PEP, please provide details
+
+# 表4
+## 表カラム名
+Director1
+Director2
+## 表項目名
+Title
+Full name
+DOB (mm/dd/yyyy)
+Nationality
+Country of Residence
+Politically Exposed Person (PEP)
+If the individual is a PEP, please provide details
+
+※JSONの値は全て文字列型(string)とし、値が未入力の場合は空文字("")としてください。
+※JSONのキーはアルファベットの小文字および数字のみとし、特殊文字は省略し、文字の区切りとして適切な位置にアンダースコア(_)を挿入してスネークケースとしてください。
+※JSONのフォーマットは以下のような形でお願いします。
+{
+  "beneficial_owner_1": {
+    #各項目
+  },
+  "beneficial_owner_2": {
+    #各項目
+  }
+}
