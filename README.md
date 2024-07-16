@@ -11,7 +11,7 @@ touch .env
 GEMINI_API_KEY=<GEMINI_API_KEY>
 ```
 
-## 3. Edit prompt texts as you want to try in the ```/prompt``` directory
+## 3. Edit prompt texts and an application form PDF as you want to try
 
 ## 4. Execute the script which you want to try
 ### when executing extract_and_transform.py
