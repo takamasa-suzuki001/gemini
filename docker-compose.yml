@@ -1,0 +1,13 @@
+services:
+  gemini:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./files/output_pngs:/app/files/output_pngs
+      - ./prompts:/app/prompts
+    environment:
+      - PYTHON_SCRIPT
+    tty: true
+    stdin_open: true
+    command: ${PYTHON_SCRIPT}

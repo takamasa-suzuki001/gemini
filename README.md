@@ -1,7 +1,7 @@
 # Gemini API for Application Form
 
 ## 1. Build the image
-```docker build . -t gemini```
+```docker compose up --build```
 
 ## 2. Create an .env file in the project root directory and add an API Key of Gemini API
 ```
@@ -16,25 +16,10 @@ GEMINI_API_KEY=<GEMINI_API_KEY>
 ## 4. Execute the script which you want to try
 ### when executing extract_and_transform.py
 ```
-docker run \
-  -v ./files/output_pngs:/app/files/output_pngs \
-  -v ./prompts:/app/prompts \
-  -it gemini \
-  extract_and_transform.py
-```
-or
-```
-docker run \
-  -v ./files/output_pngs:/app/files/output_pngs \
-  -v ./prompts:/app/prompts \
-  -it gemini
+PYTHON_SCRIPT=extract_and_transform.py docker compose up
 ```
 
 ### when executing image_recognition.py
 ```
-docker run \
-  -v ./files/output_pngs:/app/files/output_pngs \
-  -v ./prompts:/app/prompts \
-  -it gemini \
-  image_recognition.py
+PYTHON_SCRIPT=image_recognition.py docker compose up
 ```

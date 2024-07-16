@@ -43,4 +43,5 @@ class GeminiAPI():
             prompt_content = p.read()
             if pdf_str:
                 prompt_content += f"\n{pdf_str}"
+            print(f"executing {os.environ["PYTHON_SCRIPT"]}...")
             return self.chat_session.send_message(prompt_content)
